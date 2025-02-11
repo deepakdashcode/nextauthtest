@@ -28,6 +28,7 @@ export default function EditorPage() {
   const handleChange = (value) => {
     setContent(value);
     localStorage.setItem("editorContent", value);
+    console.log(value)
   };
 
   return (
