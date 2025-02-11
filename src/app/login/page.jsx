@@ -25,10 +25,17 @@ const Login = () => {
             <div className='bg-white shadow-lg rounded-lg p-6 w-full max-w-sm text-center'>
                 <h2 className='text-2xl font-bold text-gray-700 mb-4'>Welcome</h2>
                 <button 
-                    className='bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded w-full transition'
+                    className='bg-blue-500 mb-5 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded w-full transition'
                     onClick={() => signIn('google')}
                 >
                     Login with Google
+                </button>
+
+                <button 
+                    className='bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded w-full transition'
+                    onClick={() => signIn('github')}
+                >
+                    Login with Github
                 </button>
                 {session.status === 'authenticated' && (
                     <div className='mt-4'>
