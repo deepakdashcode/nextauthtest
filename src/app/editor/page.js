@@ -4,6 +4,7 @@ import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import dynamic from "next/dynamic";
 import "react-quill-new/dist/quill.snow.css";
+import TextEditor from "@/component/TextEditor";
 
 const ReactQuill = dynamic(() => import("react-quill-new"), { ssr: false });
 
@@ -49,7 +50,8 @@ export default function EditorPage() {
             View Demo Page
           </button>
         </div>
-        <ReactQuill className="border rounded-lg text-black" value={content} onChange={handleChange} />
+        <TextEditor className="border rounded-lg text-black" value={content} onChange={handleChange}/>
+        {/* <ReactQuill className="border rounded-lg text-black" value={content} onChange={handleChange} /> */}
       </div>
     </div>
   );
